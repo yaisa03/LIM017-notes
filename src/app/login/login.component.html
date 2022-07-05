@@ -1,0 +1,12 @@
+<div id="loginContainer">
+    <img src="./assets/images/noteAppImg.png" alt="noteAppImg" id="noteAppImg">
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <h2>Inicia Sesion</h2>
+        <input type="text" formControlName="email" placeholder="Email">
+        <input type="password" formControlName="password" placeholder="Contraseña">
+        <button type="submit">Iniciar sesion</button>
+        <P>No tienes cuenta <a href="register">Registrate</a></P>
+        <p>Inicia sesion con:</p>
+        <p>Google</p>
+    </form>
+</div>

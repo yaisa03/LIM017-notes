@@ -1,0 +1,6 @@
+<form [formGroup]="formRegister" (ngSubmit)="onSubmit()" id="registerContainer">
+    <input type="text" id="registerEmail" formControlName="email">
+    <input type="password" id="registerPassword" formControlName="password">
+    <input type="password" id="registerPasswordConf" formControlName="passwordConf">
+    <button type="submit" id="registerBtn">Registrate</button>
+</form>
