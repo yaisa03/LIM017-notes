@@ -88,7 +88,8 @@ h1 {
 }
 
 .userEmail:focus+.label,
-.userPassword:focus+.label {
+.userPassword:focus+.label,
+.filled {
     top: -10px;
     color: #7e4ccb;
     font-size: 14px;

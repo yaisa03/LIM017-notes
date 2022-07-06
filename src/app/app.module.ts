@@ -11,13 +11,15 @@ import { HeaderComponent } from './header/header.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
