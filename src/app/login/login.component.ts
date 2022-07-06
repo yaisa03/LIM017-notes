@@ -8,7 +8,6 @@ import { UserService } from '../services/user.services';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   formLogin: FormGroup;
 
   constructor(private userService: UserService) {
@@ -29,6 +28,6 @@ export class LoginComponent implements OnInit {
     })
     .catch(err => console.log(err));
   }
-
+  
 
 }

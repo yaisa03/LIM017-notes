@@ -1,12 +1,18 @@
 <div id="loginContainer">
     <img src="./assets/images/noteAppImg.png" alt="noteAppImg" id="noteAppImg">
     <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-        <h2>Inicia Sesion</h2>
-        <input type="text" formControlName="email" placeholder="Email">
-        <input type="password" formControlName="password" placeholder="Contraseña">
-        <button type="submit">Iniciar sesion</button>
-        <P>No tienes cuenta <a href="register">Registrate</a></P>
-        <p>Inicia sesion con:</p>
-        <p>Google</p>
+        <h1>Inicia Sesión</h1>
+        <div class="emailContainer">
+            <input class="userEmail" type="text" formControlName="email" placeholder="Ingresa tu email">
+            <label class="label" for="userEmail">Email</label>
+        </div>
+        <div class="passwordContainer">
+            <input class="userPassword" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <label class="label" for="userPassword">Contraseña</label>
+        </div>
+        <button type="submit">Iniciar sesión</button>
+        <P>¿No tienes cuenta? <a href="register">Registrate</a></P>
+        <p>Inicia sesión con:</p>
+        <img src="./assets/images/google.png" alt="googleLogo" id="googleLogo">
     </form>
 </div>
