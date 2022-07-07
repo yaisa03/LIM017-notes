@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from '../services/user.services';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,34 @@ export class LoginComponent implements OnInit {
         this.formLogin.reset();
         this.router.navigate(['/notes']);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        let errMessage="";
+        switch (err.message) {
+          case 'Firebase: Error (auth/internal-error).':
+            errMessage = 'ingresar contraseña';
+            break;
+          case 'Firebase: Error (auth/invalid-email).':
+            errMessage = 'email invalido';
+            break;
+          case 'Firebase: Error (auth/user-not-found).':
+            errMessage = 'usuario no encontrado';
+            break;
+          case 'Firebase: Error (auth/wrong-password).':
+            errMessage = 'contraseña incorrecta';
+            break;
+          case 'Firebase: Error (auth/missing-email).':
+            errMessage = 'ingresar email';
+            break;
+          default:
+            break;
+        }
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: errMessage,
+          heightAuto: false
+        })
+      });
   }
 
   onClick() {
