@@ -3,15 +3,15 @@
     <form [formGroup]="formRegister" (ngSubmit)="onSubmit()">
         <h1>Registro</h1>
         <div class="emailContainer">
-            <input class="userEmail" type="text" formControlName="email" placeholder="Ingresa tu email">
+            <input (blur) = 'onBlur($event)' class="userEmail" type="text" formControlName="email" placeholder="Ingresa tu email">
             <label class="label" for="userEmail">Email</label>
         </div>
         <div class="passwordContainer">
-            <input class="userPassword" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input (blur) = 'onBlur($event)' class="userPassword" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
             <label class="label" for="userPassword">Contraseña</label>
         </div>
         <div class="passwordContainer">
-            <input class="userPassword" type="password" formControlName="passwordConf" placeholder="Confirma tu contraseña">
+            <input (blur) = 'onBlur($event)' class="userPassword" type="password" formControlName="passwordConf" placeholder="Confirma tu contraseña">
             <label class="label" for="userPassword">Contraseña</label>
         </div>
         <button type="submit">Registrate</button>

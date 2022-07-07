@@ -4,12 +4,25 @@
 }
 
 #googleLogo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+}
+
+#googleLogo:hover {
+    transform: scale(1.1); 
 }
 
 h1 {
     font-size: 45px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #7e4ccb;
 }
 
 #loginContainer {
@@ -18,7 +31,8 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 85vh;
+    height: 100%;
+    width: 100%;
 }
 
 #loginContainer form {

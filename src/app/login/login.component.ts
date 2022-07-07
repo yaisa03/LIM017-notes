@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router
-    ) {
+  ) {
     this.formLogin = new FormGroup({
       email: new FormControl(),
       password: new FormControl()
@@ -24,25 +24,36 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit() {
     this.userService.login(this.formLogin.value.email, this.formLogin.value.password)
-    .then(response => {
-      console.log(response);
-      this.formLogin.reset();
-      this.router.navigate(['/notes']);
-    })
-    .catch(err => console.log(err));
+      .then(response => {
+        console.log(response);
+        this.formLogin.reset();
+        this.router.navigate(['/notes']);
+      })
+      .catch(err => console.log(err));
   }
 
-  onClick(){
+  onClick() {
     this.userService.loginWithGoogle()
-    .then((response) => {
-      console.log(response);
-      this.formLogin.reset();
-      this.router.navigate(['/notes']);
-    })
-    .catch(err => console.log(err));
+      .then((response) => {
+        console.log(response);
+        this.formLogin.reset();
+        this.router.navigate(['/notes']);
+      })
+      .catch(err => console.log(err));
   }
-  
+
+  onBlur(event: Event) {
+    const input = (event.target as HTMLInputElement);
+    const label = (input.nextElementSibling as HTMLInputElement);
+    if (input.value != "") {
+      label.classList.add("filled");
+      console.log('Focus Is Lost for this Element flled');
+    } else {
+      label.classList.remove("filled");
+      console.log('Focus Is Lost for this Element unfilled');
+    }
+  }
 
 }

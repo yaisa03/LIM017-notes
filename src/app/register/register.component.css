@@ -8,6 +8,10 @@
     height: 50px;
 }
 
+#googleLogo:hover {
+    transform: scale(1.1); 
+}
+
 h1 {
     font-size: 45px;
 }
@@ -18,7 +22,8 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 85vh;
+    height: 100%;
+    width: 100%;
 }
 
 #registerContainer form {
@@ -88,7 +93,8 @@ h1 {
 }
 
 .userEmail:focus+.label,
-.userPassword:focus+.label {
+.userPassword:focus+.label,
+.filled {
     top: -10px;
     color: #7e4ccb;
     font-size: 14px;
