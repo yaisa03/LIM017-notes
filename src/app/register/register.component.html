@@ -7,12 +7,20 @@
             <label class="label" for="userEmail">Email</label>
         </div>
         <div class="passwordContainer">
-            <input (blur) = 'onBlur($event)' class="userPassword" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input (blur) = 'onBlur($event)' class="userPassword" [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Ingresa tu contraseña">
             <label class="label" for="userPassword">Contraseña</label>
+            <fa-icon icon="eye" alt="show" class="eye" (click)="showPassword = !showPassword"
+                [class.hide]="showPassword"></fa-icon>
+            <fa-icon icon="eye-slash" alt="hide" class="eye" (click)="showPassword = !showPassword"
+                [class.hide]="!showPassword"></fa-icon>
         </div>
         <div class="passwordContainer">
-            <input (blur) = 'onBlur($event)' class="userPassword" type="password" formControlName="passwordConf" placeholder="Confirma tu contraseña">
+            <input (blur) = 'onBlur($event)' class="userPassword" [type]="showPassword ? 'text' : 'password'" formControlName="passwordConf" placeholder="Confirma tu contraseña">
             <label class="label" for="userPassword">Contraseña</label>
+            <fa-icon icon="eye" alt="show" class="eye" (click)="showPasswordOne = !showPasswordOne"
+                [class.hide]="showPasswordOne"></fa-icon>
+            <fa-icon icon="eye-slash" alt="hide" class="eye" (click)="showPasswordOne = !showPasswordOne"
+                [class.hide]="!showPasswordOne"></fa-icon>
         </div>
         <button type="submit">Registrate</button>
         <p>Registrate con:</p>

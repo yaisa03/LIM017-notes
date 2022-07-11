@@ -111,3 +111,15 @@ h1 {
 .userPassword:focus::placeholder {
     opacity: 1;
 }
+
+.hide {
+    display: none;
+}
+
+.eye {
+    position: absolute;
+    padding: 10px 8px;
+    z-index: 100;
+    cursor: pointer;
+    right: 0px;
+}

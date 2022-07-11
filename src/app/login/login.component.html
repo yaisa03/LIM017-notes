@@ -3,12 +3,18 @@
     <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
         <h1>Inicia Sesión</h1>
         <div class="emailContainer">
-            <input (blur) = 'onBlur($event)' class="userEmail" type="text" formControlName="email" placeholder="Ingresa tu email">
+            <input (blur)='onBlur($event)' class="userEmail" type="text" formControlName="email"
+                placeholder="Ingresa tu email">
             <label class="label" for="userEmail">Email</label>
         </div>
         <div class="passwordContainer">
-            <input (blur) = 'onBlur($event)' class="userPassword" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input (blur)='onBlur($event)' class="userPassword" formControlName="password"
+                placeholder="Ingresa tu contraseña" [type]="showPassword ? 'text' : 'password'">
             <label class="label" for="userPassword">Contraseña</label>
+            <fa-icon icon="eye" alt="show" class="eye" (click)="showPassword = !showPassword"
+                [class.hide]="showPassword"></fa-icon>
+            <fa-icon icon="eye-slash" alt="hide" class="eye" (click)="showPassword = !showPassword"
+                [class.hide]="!showPassword"></fa-icon>
         </div>
         <button type="submit">Iniciar sesión</button>
         <P>¿No tienes cuenta? <a href="register">Registrate</a></P>

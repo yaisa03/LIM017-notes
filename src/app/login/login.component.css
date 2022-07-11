@@ -9,7 +9,7 @@
 }
 
 #googleLogo:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 h1 {
@@ -32,7 +32,6 @@ a:hover {
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    width: 100%;
 }
 
 #loginContainer form {
@@ -119,4 +118,16 @@ a:hover {
 .userEmail:focus::placeholder,
 .userPassword:focus::placeholder {
     opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.eye {
+    position: absolute;
+    padding: 10px 8px;
+    z-index: 100;
+    cursor: pointer;
+    right: 0px;
 }

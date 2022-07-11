@@ -86,12 +86,9 @@ export class RegisterComponent implements OnInit {
   onBlur(event: Event) {
     const input = (event.target as HTMLInputElement);
     const label = (input.nextElementSibling as HTMLInputElement);
-    if (input.value != "") {
-      label.classList.add("filled");
-      console.log('Focus Is Lost for this Element flled');
-    } else {
-      label.classList.remove("filled");
-      console.log('Focus Is Lost for this Element unfilled');
-    }
+    return (input.value != "") ? label.classList.add("filled") : label.classList.remove("filled");
   }
+
+  showPasswordOne: boolean = false;
+  showPassword: boolean = false;
 }
