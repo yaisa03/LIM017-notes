@@ -15,6 +15,8 @@ import { NotesComponent } from './notes/notes.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { NoteCardComponent } from './note-card/note-card.component';
+import { NotesListComponent } from './notes-list/notes-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    NotesComponent
+    NotesComponent,
+    NoteCardComponent,
+    NotesListComponent
   ],
   imports: [
     BrowserModule,

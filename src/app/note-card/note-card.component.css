@@ -1,0 +1,72 @@
+.noteCardContainer {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px 2px black;
+    transition: box-shadow 0.2s ease-out;
+    position: relative;
+}
+
+.noteCardContainer:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 2px black;
+}
+
+.noteCardContent {
+    padding: 30px;
+
+}
+
+.noteCardTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.xButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 16px;
+    color: red;
+    padding: 0px 4px;
+    border: 2px solid rgba(255, 0, 0, 0.295);
+    border-radius: 4px;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    opacity: 0;
+    /* botton oculto */
+    transform: scale(0.8);
+}
+
+.noteCardContainer:hover .xButton {
+    opacity: 1;
+    transition-delay: 0.35s;
+}
+
+.xButton:hover {
+    transform: scale(1);
+}
+
+.xButton::active {
+    background-color: darken(red, 5%);
+}
+
+.noteCardBody {
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+/* .noteCardContainer:hover .noteCardBody{
+    max-height: 100%;
+}
+
+.noteCardContainer:hover .fadeoutBodyText {
+    display: none;
+} */
+
+.fadeoutBodyText {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, white 100%);
+    height: 50%;
+    width: 100%;
+}
