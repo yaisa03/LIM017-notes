@@ -17,6 +17,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
+import {DialogModule} from '@angular/cdk/dialog';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { NotesListComponent } from './notes-list/notes-list.component';
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    DialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
