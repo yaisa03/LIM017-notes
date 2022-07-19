@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 35%;
+    left: 39%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    height: 250px;
+}
+
+.noteTitle{
+    height: 30%;
+}
+
+.noteBody{
+    height: 90%;
+}
+
+textarea{
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+.btnContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
